@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h1>CycleGAN Template</h1>
+{% endblock %}
+
+
+{% block body %}
+  <div class="container">
+    <h1>Predicted Class: {{ result.class_name }}</h1>
+    <hr>
+    <div>
+      <img src="{{ result.image_path }}" class="img-rounded" width="256" height="256">
+    </div>
+    <a href="{{ url_for('index') }}" class="btn-default">Back</a>
+  </div>
+
+{% endblock %}
